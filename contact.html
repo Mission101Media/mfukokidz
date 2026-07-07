@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Mfuko Kidz</title>
+    <meta name="description" content="Contact Mfuko Kidz for collaborations, shop questions, video ideas, and family-friendly brand opportunities.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Mfuko Kidz home">
+        <img src="assets/mfuko-kidz-logo.png" alt="Mfuko Kidz logo">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="videos.html">Videos</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-section">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s connect with Mfuko Kidz.</h1>
+          <p>Use this page for collaboration requests, video ideas, shop questions, and product drop updates.</p>
+          <div class="contact-card">
+            <h2>Good For</h2>
+            <p>Family-friendly partnerships, product ideas, event requests, YouTube collaborations, and custom shop orders.</p>
+          </div>
+        </div>
+        <form class="contact-form" action="mailto:hello@mfukokidz.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            Topic
+            <select name="topic" required>
+              <option value="">Choose one</option>
+              <option>Shop question</option>
+              <option>Video idea</option>
+              <option>Collaboration</option>
+              <option>Custom order</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <img src="assets/mfuko-kidz-logo.png" alt="Mfuko Kidz logo">
+      <p>Fun videos, family creativity, and handmade drops from the Mfuko Kidz.</p>
+      <nav aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="videos.html">Videos</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
