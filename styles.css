@@ -103,10 +103,44 @@ a {
 }
 
 .hero {
+  position: relative;
   background:
     radial-gradient(circle at 14% 16%, rgba(255, 195, 0, 0.32), transparent 27%),
     radial-gradient(circle at 84% 12%, rgba(2, 168, 245, 0.28), transparent 26%),
     linear-gradient(135deg, #ffffff 0%, #f0fbff 52%, #fff6d5 100%);
+}
+
+.hero::after {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 255, 255, 0.46) 45%, rgba(255, 255, 255, 0.16) 100%),
+    radial-gradient(circle at 18% 24%, rgba(255, 195, 0, 0.2), transparent 30%),
+    radial-gradient(circle at 80% 18%, rgba(2, 168, 245, 0.16), transparent 28%);
+  pointer-events: none;
+}
+
+.hero-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(135deg, #ffffff, #f0fbff 52%, #fff6d5);
+  overflow: hidden;
+}
+
+.hero-video-bg video,
+.hero-video-bg iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.hero > :not(.hero-video-bg) {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1,
@@ -271,6 +305,7 @@ h3 {
 }
 
 .video-poster {
+  position: relative;
   display: grid;
   place-items: center;
   min-height: 330px;
@@ -280,8 +315,52 @@ h3 {
 }
 
 .video-poster img {
+  position: relative;
+  z-index: 2;
   max-height: 320px;
   object-fit: contain;
+}
+
+.media-poster::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(180deg, rgba(7, 22, 47, 0.05), rgba(7, 22, 47, 0.34));
+  pointer-events: none;
+}
+
+.white-poster {
+  background: var(--white);
+}
+
+.white-poster::after,
+.white-poster .slide-video,
+.white-poster iframe {
+  display: none;
+}
+
+.slide-video,
+.youtube-poster iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.youtube-poster iframe {
+  z-index: 2;
+}
+
+.video-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 0;
 }
 
 .gradient-card {
@@ -429,6 +508,7 @@ h3 {
 
 .product-image,
 .video-thumb {
+  position: relative;
   display: grid;
   place-items: center;
   min-height: 180px;
@@ -439,6 +519,47 @@ h3 {
   font-weight: 950;
   text-align: center;
   text-transform: uppercase;
+}
+
+.product-photo {
+  min-height: 210px;
+  padding: 0;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.product-photo img {
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  object-fit: cover;
+}
+
+.video-link {
+  display: block;
+}
+
+.video-link:hover .video-thumb {
+  transform: translateY(-3px);
+}
+
+.play-badge {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  min-height: 34px;
+  border: 2px solid var(--navy);
+  border-radius: 999px;
+  padding: 0 12px;
+  color: var(--navy);
+  background: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 950;
+  box-shadow: 0 4px 0 var(--navy);
 }
 
 .product-image.blue,
@@ -530,6 +651,19 @@ h3 {
   width: 100%;
   max-height: 190px;
   object-fit: contain;
+}
+
+.video-thumb.with-embed {
+  padding: 0;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.video-thumb.with-embed iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  border: 0;
 }
 
 .contact-section {

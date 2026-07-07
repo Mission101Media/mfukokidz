@@ -24,6 +24,20 @@
 
     <main>
       <section class="hero">
+        <div class="hero-video-bg" aria-hidden="true">
+          <!-- Change this src when you want a different main header video. -->
+          <video autoplay muted loop playsinline poster="assets/mfuko-kidz-logo.png">
+            <source src="assets/videos/pool-games-preview.mp4" type="video/mp4">
+          </video>
+          <!-- To use YouTube instead, replace VIDEO_ID and remove these comment marks.
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&playsinline=1"
+            title="Mfuko Kidz header video"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+          -->
+        </div>
         <div class="hero-copy">
           <p class="eyebrow">Family fun, big laughs, creative drops</p>
           <h1>Mfuko Kidz</h1>
@@ -46,19 +60,31 @@
         <div class="video-slider" data-slider>
           <button class="slider-control previous" type="button" data-direction="-1" aria-label="Previous video">‹</button>
           <article class="video-feature" data-slide>
-            <div class="video-poster">
+            <div class="video-poster media-poster">
+              <!-- To use a local video background, replace the src with a file in assets/videos/. -->
+              <video class="slide-video" autoplay muted loop playsinline poster="assets/pool-games-logo.png">
+                <source src="assets/videos/pool-games-preview.mp4" type="video/mp4">
+              </video>
               <img src="assets/pool-games-logo.png" alt="Pool Games with the Mfuko Kidz logo">
             </div>
             <div class="video-details">
               <span class="pill">Pool Games Series</span>
               <h3>Pool Games with the Mfuko Kidz</h3>
               <p>Splashes, challenges, and friendly competition from their first YouTube series.</p>
-              <a class="button primary" href="videos.html">See Episode Lineup</a>
+              <a class="button primary" href="videos.html#pool-games">See Episode Lineup</a>
             </div>
           </article>
           <article class="video-feature is-hidden" data-slide>
-            <div class="video-poster gradient-card yellow">
-              <span>Challenge Day</span>
+            <div class="video-poster media-poster youtube-poster white-poster">
+              <!-- Paste a YouTube embed here when the upload is ready.
+              <iframe
+                src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1&playlist=VIDEO_ID&controls=0&playsinline=1"
+                title="Mfuko Kidz YouTube video preview"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+              -->
+              <img src="assets/backyard-challenge.png" alt="Backyard Challenge Time logo">
             </div>
             <div class="video-details">
               <span class="pill">Coming Soon</span>
@@ -68,8 +94,11 @@
             </div>
           </article>
           <article class="video-feature is-hidden" data-slide>
-            <div class="video-poster gradient-card green">
-              <span>Maker Day</span>
+            <div class="video-poster media-poster white-poster">
+              <video class="slide-video" autoplay muted loop playsinline>
+                <source src="assets/videos/maker-day-preview.mp4" type="video/mp4">
+              </video>
+              <img src="assets/creating-with-mfuko-kidz.png" alt="Creating with the Mfuko Kidz logo">
             </div>
             <div class="video-details">
               <span class="pill">Shop Preview</span>
@@ -100,19 +129,25 @@
         </div>
         <div class="product-grid">
           <article class="product-card">
-            <div class="product-image blue">Name Signs</div>
+            <div class="product-image product-photo">
+              <img src="assets/custom-room-signs.png" alt="Custom room signs product graphic">
+            </div>
             <h3>Custom Room Signs</h3>
             <p>Personalized laser-cut signs for bedrooms, playrooms, and gifts.</p>
             <span class="price">Coming Soon</span>
           </article>
           <article class="product-card">
-            <div class="product-image pink">Game Tokens</div>
+            <div class="product-image product-photo">
+              <img src="assets/pool-game-tokens.png" alt="Pool game tokens product graphic">
+            </div>
             <h3>Pool Game Tokens</h3>
             <p>Colorful score tokens and challenge pieces inspired by the YouTube series.</p>
             <span class="price">Coming Soon</span>
           </article>
           <article class="product-card">
-            <div class="product-image yellow">Keychains</div>
+            <div class="product-image product-photo">
+              <img src="assets/mfuko-kidz-keychains.png" alt="Mfuko Kidz keychains product graphic">
+            </div>
             <h3>Mfuko Kidz Keychains</h3>
             <p>Fun backpack clips, bag tags, and small collectibles for fans.</p>
             <span class="price">Coming Soon</span>
